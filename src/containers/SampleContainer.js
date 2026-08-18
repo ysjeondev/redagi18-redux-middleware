@@ -14,7 +14,7 @@ const SampleContainer = ({
 }) => {
     useEffect(() => {
         getPost(1);
-        getUsers();
+        getUsers(1);
     },[getPost, getUsers])
     return(
         <Sample
@@ -27,14 +27,15 @@ const SampleContainer = ({
 }
 
 export default connect(
-    ({ sample }) => ({
-        post:sample.post,
-        users:sample.users,
-        loadingPost:sample.loading.GET_POST,
-        loadingUsers:sample.loading.GET_USERS,
+    ({ sample, loading }) => ({
+        post: sample.post,
+        users: sample.users,
+
+        loadingPost: loading['sample/GET_POST'],
+        loadingUsers: loading['sample/GET_USERS'],
     }),
     {
         getPost,
         getUsers
     }
-)(SampleContainer)
+)(SampleContainer);
