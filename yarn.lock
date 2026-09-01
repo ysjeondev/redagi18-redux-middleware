@@ -1070,7 +1070,7 @@
     "@babel/plugin-transform-modules-commonjs" "^7.29.7"
     "@babel/plugin-transform-typescript" "^7.29.7"
 
-"@babel/runtime@^7.11.2", "@babel/runtime@^7.12.5", "@babel/runtime@^7.16.3":
+"@babel/runtime@^7.11.2", "@babel/runtime@^7.12.5", "@babel/runtime@^7.16.3", "@babel/runtime@^7.28.4":
   version "7.29.7"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.29.7.tgz#12022450c45a4da6d8d8287b18a4ff2ddb23f768"
   integrity sha512-Nq8OhGWiZIZGV6hLHoyAKLLcJihP/xFeBMGJoUrxTX2psI8dCifzLhZISFb+VWS3wFMRDmCGw5R+dOySCqPLhw==
@@ -1585,6 +1585,48 @@
     loader-utils "^2.0.4"
     schema-utils "^4.2.0"
     source-map "^0.7.3"
+
+"@redux-saga/core@^1.5.1":
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/@redux-saga/core/-/core-1.5.1.tgz#2aee91fe195341ba0baff635ee874d9c28d5d87c"
+  integrity sha512-Yh/eO0YBawlK5qAVXh9vSS0BDMWyFe6qIcVcKa8JtPOo3IFwRly33ZYBrsCwxu7jdSQT9QUJHChAU8fil5dRZQ==
+  dependencies:
+    "@babel/runtime" "^7.28.4"
+    "@redux-saga/deferred" "^1.3.1"
+    "@redux-saga/delay-p" "^1.3.1"
+    "@redux-saga/is" "^1.2.1"
+    "@redux-saga/symbols" "^1.2.1"
+    "@redux-saga/types" "^1.4.1"
+
+"@redux-saga/deferred@^1.3.1":
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/@redux-saga/deferred/-/deferred-1.3.1.tgz#f274c9df9a1e8b837dc912188fff3dfdf7fd24e8"
+  integrity sha512-0YZ4DUivWojXBqLB/TmuRRpDDz7tyq1I0AuDV7qi01XlLhM5m51W7+xYtIckH5U2cMlv9eAuicsfRAi1XHpXIg==
+
+"@redux-saga/delay-p@^1.3.1":
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/@redux-saga/delay-p/-/delay-p-1.3.1.tgz#c2d481de63c1ef674c1cddab538992c39375855e"
+  integrity sha512-597I7L5MXbD/1i3EmcaOOjL/5suxJD7p5tnbV1PiWnE28c2cYiIHqmSMK2s7us2/UrhOL2KTNBiD0qBg6KnImg==
+  dependencies:
+    "@redux-saga/symbols" "^1.2.1"
+
+"@redux-saga/is@^1.2.1":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@redux-saga/is/-/is-1.2.1.tgz#5fe101fcb365236577f5a8c625e4c0a3c2eab736"
+  integrity sha512-x3aWtX3GmQfEvn8dh0ovPbsXgK9JjpiR24wKztpGbZP8JZUWWvUgKrvnWZ/T/4iphOBftyVc9VrIwhAnsM+OFA==
+  dependencies:
+    "@redux-saga/symbols" "^1.2.1"
+    "@redux-saga/types" "^1.3.1"
+
+"@redux-saga/symbols@^1.2.1":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@redux-saga/symbols/-/symbols-1.2.1.tgz#48b6137ac47d3a3a93b847f1850c86fb461e0012"
+  integrity sha512-3dh+uDvpBXi7EUp/eO+N7eFM4xKaU4yuGBXc50KnZGzIrR/vlvkTFQsX13zsY8PB6sCFYAgROfPSRUj8331QSA==
+
+"@redux-saga/types@^1.3.1", "@redux-saga/types@^1.4.1":
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/@redux-saga/types/-/types-1.4.1.tgz#c0a7954a80312a9dc4eabdf539435d625235949a"
+  integrity sha512-GSOGLWvJIjA63ywISJZr4skTjTnyQdu2WZbUeVguYNMyinEa9yTflBlVOFuBZxmyMR1dQodCE3PiKDu0BvyAHg==
 
 "@rollup/plugin-babel@^5.2.0":
   version "5.3.1"
@@ -7893,12 +7935,25 @@ redux-actions@^3.0.3:
     just-curry-it "5.3.0"
     reduce-reducers "1.0.4"
 
+redux-devtools-extension@^2.13.9:
+  version "2.13.9"
+  resolved "https://registry.yarnpkg.com/redux-devtools-extension/-/redux-devtools-extension-2.13.9.tgz#6b764e8028b507adcb75a1cae790f71e6be08ae7"
+  integrity sha512-cNJ8Q/EtjhQaZ71c8I9+BPySIBVEKssbPpskBfsXqb8HJ002A3KRVHfeRzwRo6mGPqsm7XuHTqNSNeS1Khig0A==
+
 redux-logger@^3.0.6:
   version "3.0.6"
   resolved "https://registry.yarnpkg.com/redux-logger/-/redux-logger-3.0.6.tgz#f7555966f3098f3c88604c449cf0baf5778274bf"
   integrity sha512-JoCIok7bg/XpqA1JqCqXFypuqBbQzGQySrhFzewB7ThcnysTO30l4VCst86AuB9T9tuT03MAA56Jw2PNhRSNCg==
   dependencies:
     deep-diff "^0.3.5"
+
+redux-saga@^1.5.1:
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/redux-saga/-/redux-saga-1.5.1.tgz#2d6b971eb8c0f359d7d9c8dcd72830d928044e8f"
+  integrity sha512-ZwnV/p+ABHoaDzyBrZshmIG/axRQG6AQJre8p9t1bPI/i6UzE5C9jGG9wgSKi8ojLMVyFLwmiDwFtuaul9c3wQ==
+  dependencies:
+    "@babel/runtime" "^7.28.4"
+    "@redux-saga/core" "^1.5.1"
 
 redux-thunk@^3.1.0:
   version "3.1.0"

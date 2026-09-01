@@ -1,4 +1,4 @@
-import { startloading, finishloading } from "../modules/loading";
+import { startLoading, finishLoading } from "../modules/loading";
 
 export default function createRequestThunk(type, request) {
     const SUCCESS = `${type}_SUCCESS`;
@@ -7,7 +7,7 @@ export default function createRequestThunk(type, request) {
     return function (params) {
         return async function (dispatch) {
             dispatch({ type });
-            dispatch(startloading(type));
+            dispatch(startLoading(type));
             try {
                 const response = await request(params);
 
@@ -15,14 +15,14 @@ export default function createRequestThunk(type, request) {
                     type: SUCCESS,
                     payload: response.data
                 });
-                dispatch(finishloading(type))
+                dispatch(finishLoading(type))
             } catch (e) {
                 dispatch({
                     type: FAILURE,
                     payload: e,
                     error: true
                 });
-               dispatch(finishloading(type));
+               dispatch(finishLoading(type));
                 throw e;
             }
         };
